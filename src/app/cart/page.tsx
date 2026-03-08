@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useCartStore } from "@/store/cart";
@@ -103,11 +104,14 @@ export default function CartPage() {
                         href={`/shop/${item.product.slug}`}
                         className="shrink-0"
                       >
-                        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-[var(--color-soft-sand)] overflow-hidden">
+                        <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-[var(--color-soft-sand)] overflow-hidden">
                           {item.product.images?.[0] ? (
-                            <div
-                              className="w-full h-full bg-cover bg-center"
-                              style={{ backgroundImage: `url(${item.product.images[0].url})` }}
+                            <Image
+                              src={item.product.images[0].url}
+                              alt={item.product.images[0].alt_text}
+                              fill
+                              className="object-cover"
+                              sizes="96px"
                             />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center">

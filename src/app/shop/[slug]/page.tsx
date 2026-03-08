@@ -1,6 +1,7 @@
 "use client";
 
 import { use } from "react";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -45,9 +46,13 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-[var(--color-soft-sand)]">
               {product.images?.[0] ? (
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${product.images[0].url})` }}
+                <Image
+                  src={product.images[0].url}
+                  alt={product.images[0].alt_text}
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">

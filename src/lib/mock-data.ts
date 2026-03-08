@@ -31,14 +31,14 @@ export const mockDrops: Drop[] = [
 ];
 
 export const mockImages: ProductImage[] = [
-  { id: "img-1", product_id: "prod-1", url: "/images/placeholder-green-necklace.jpg", alt_text: "Green sea glass necklace", sort_order: 0, is_primary: true },
-  { id: "img-2", product_id: "prod-2", url: "/images/placeholder-blue-bracelet.jpg", alt_text: "Blue sea glass bracelet", sort_order: 0, is_primary: true },
-  { id: "img-3", product_id: "prod-3", url: "/images/placeholder-white-earrings.jpg", alt_text: "White sea glass earrings", sort_order: 0, is_primary: true },
-  { id: "img-4", product_id: "prod-4", url: "/images/placeholder-rare-necklace.jpg", alt_text: "Rare lavender sea glass necklace", sort_order: 0, is_primary: true },
-  { id: "img-5", product_id: "prod-5", url: "/images/placeholder-green-bracelet.jpg", alt_text: "Green sea glass bracelet", sort_order: 0, is_primary: true },
-  { id: "img-6", product_id: "prod-6", url: "/images/placeholder-brown-earrings.jpg", alt_text: "Brown sea glass earrings", sort_order: 0, is_primary: true },
-  { id: "img-7", product_id: "prod-7", url: "/images/placeholder-blue-necklace.jpg", alt_text: "Blue sea glass necklace", sort_order: 0, is_primary: true },
-  { id: "img-8", product_id: "prod-8", url: "/images/placeholder-white-bracelet.jpg", alt_text: "White sea glass bracelet", sort_order: 0, is_primary: true },
+  { id: "img-1", product_id: "prod-1", url: "/img/Card%201%20Image.png", alt_text: "Green sea glass wire-wrapped pendant", sort_order: 0, is_primary: true },
+  { id: "img-2", product_id: "prod-2", url: "/img/rc2img.png", alt_text: "Blue sea glass earrings on ocean rock", sort_order: 0, is_primary: true },
+  { id: "img-3", product_id: "prod-3", url: "/img/Card%202%20Image.png", alt_text: "White sea glass ring on stone", sort_order: 0, is_primary: true },
+  { id: "img-4", product_id: "prod-4", url: "/img/Card%20Image.png", alt_text: "Sea glass pendant with gold chain", sort_order: 0, is_primary: true },
+  { id: "img-5", product_id: "prod-5", url: "/img/Card%203%20Image.png", alt_text: "Hammered gold sea glass cuff bracelet", sort_order: 0, is_primary: true },
+  { id: "img-6", product_id: "prod-6", url: "/img/Card%204%20Image.png", alt_text: "Blue sea glass drop earrings", sort_order: 0, is_primary: true },
+  { id: "img-7", product_id: "prod-7", url: "/img/Main%20Image.png", alt_text: "Sea glass pendant on linen", sort_order: 0, is_primary: true },
+  { id: "img-8", product_id: "prod-8", url: "/img/rc3img.png", alt_text: "Amber sea glass gold cuff bracelet", sort_order: 0, is_primary: true },
 ];
 
 export const mockProducts: Product[] = [

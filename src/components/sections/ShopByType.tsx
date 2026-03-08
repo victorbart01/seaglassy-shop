@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -8,19 +9,19 @@ const types = [
     slug: "necklace",
     label: "Necklaces",
     description: "Sea glass pendants on delicate chains",
-    gradient: "from-[var(--color-sea-glass-green)]/30 to-[var(--color-sea-foam)]",
+    image: "/img/Main Image.png",
   },
   {
     slug: "bracelet",
     label: "Bracelets",
     description: "Ocean treasures wrapped around your wrist",
-    gradient: "from-[var(--color-ocean-blue)]/30 to-[var(--color-soft-sand)]",
+    image: "/img/rc3img.png",
   },
   {
     slug: "earrings",
     label: "Earrings",
     description: "Paired sea glass drops and studs",
-    gradient: "from-[var(--color-soft-sand)] to-[var(--color-sea-glass-green)]/20",
+    image: "/img/rc2img.png",
   },
 ];
 
@@ -56,13 +57,14 @@ export function ShopByType() {
                 href={`/shop?type=${type.slug}`}
                 className="group block rounded-2xl overflow-hidden glass hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
               >
-                <div className={`aspect-[4/3] bg-gradient-to-br ${type.gradient} flex items-center justify-center relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="w-20 h-20 rounded-full bg-white/30 backdrop-blur-sm border border-white/40 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <span className="font-heading text-2xl text-[var(--color-deep-ocean)]">
-                      {type.label[0]}
-                    </span>
-                  </div>
+                <div className="aspect-[4/3] relative overflow-hidden bg-[var(--color-soft-sand)]">
+                  <Image
+                    src={type.image}
+                    alt={type.label}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-deep-ocean)]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="font-heading text-xl text-[var(--color-deep-ocean)] mb-1">

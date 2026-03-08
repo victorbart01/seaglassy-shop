@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
@@ -16,9 +17,13 @@ export function AboutSeaGlass() {
             transition={{ duration: 0.7 }}
           >
             <div className="relative">
-              <div className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-[var(--color-sea-glass-green)]/40 via-[var(--color-ocean-blue)]/20 to-[var(--color-soft-sand)] overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.4),transparent_60%)]" />
-                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[var(--color-soft-sand)]/60 to-transparent" />
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden">
+                <Image
+                  src="/img/originImg1.png"
+                  alt="Hand holding a green sea glass piece at sunset on the beach"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-2xl glass-strong p-4 flex items-center justify-center">
                 <div className="text-center">

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { cn, formatPrice } from "@/lib/utils";
 import { RarityBadge } from "./RarityBadge";
@@ -25,9 +26,12 @@ export function ProductCard({ product, className }: ProductCardProps) {
     >
       <div className="relative aspect-[4/5] overflow-hidden bg-[var(--color-soft-sand)]">
         {primaryImage ? (
-          <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-            style={{ backgroundImage: `url(${primaryImage.url})` }}
+          <Image
+            src={primaryImage.url}
+            alt={primaryImage.alt_text}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
